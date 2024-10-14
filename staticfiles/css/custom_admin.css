@@ -1,0 +1,18 @@
+/* Custom Admin CSS */
+
+body {
+    background-color: #f4f4f4; /* Change background color */
+}
+
+#site-title {
+    color: #4CAF50; /* Change the title color */
+}
+
+.admin-header {
+    background-color: #4CAF50; /* Header background color */
+    color: white; /* Header text color */
+}
+
+#content-main {
+    padding: 20px; /* Adjust content padding */
+}

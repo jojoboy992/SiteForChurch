@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Klinik - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+ <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+
+</head>
+{% block content%}
+
+<style>
+
+    @media(max-width:1030px){
+        #details{
+            margin-top: -100px !important;
+            padding-left: 100px !important;
+            width: 80% !important;
+        }
+    }
+
+    @media(max-width:768px){
+        #sunday{
+            width: 516px !important; 
+        }
+
+        #tuesday{
+            width: 516px !important; 
+        }
+
+        #thursday{
+            width: 516px !important; 
+        }
+    }
+
+    @media(max-width:670px){
+        #nav_h1{
+            font-size: 15px !important;
+        }
+
+        #nav_img{
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+
+    @media(max-width:610px){
+        #details{
+            padding-left: 70px !important;
+            width: 80% !important;
+            margin-top: -20px !important;
+        }
+
+        #details_h1{
+            font-size: 25px !important;
+        }
+    }
+
+    @media(max-width:500px){
+        #details{
+            padding-left: 70px !important;
+            width: 80% !important;
+            margin-top: -20px !important;
+        }
+
+        #details_h1{
+            font-size: 20px !important;
+        }
+
+        #details_nav{
+            width: 200px;
+            height: 40px;
+            padding: 6px !important;
+        }
+    }
+
+    @media(max-width:470px){
+        #nav_h1{
+            font-size: 10px !important;
+        }
+    }
+
+    @media(max-width:400px){
+        #details{
+            padding-left: 40px !important;
+            width: 80% !important;
+            margin-top: -20px !important;
+        }
+
+        #details_h1{
+            font-size: 20px !important;
+        }
+
+        #details_nav{
+            width: 200px;
+            height: 40px;
+            padding: 6px !important;
+        }
+    }
+
+    @media(max-width:380px){
+        #nav_h1{
+            font-size: 10px !important;
+        }
+
+        #nav_img{
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+    }
+
+    @media(max-width:380px){
+        #details_nav{
+            width: 200px;
+            height: 40px;
+            padding: 6px !important;
+        }
+    }
+
+    @media(max-width:332px){
+        #details{
+            padding-left: 40px !important;
+            width: 80% !important;
+            margin-top: -20px !important;
+        }
+
+        #details_h1{
+            font-size: 20px !important;
+        }
+
+        #details_nav{
+            width: 150px;
+            height: 40px;
+            padding: 6px !important;
+        }
+    }
+
+    @media(max-width:300px){
+        #details{
+            padding-left: 40px !important;
+            width: 80% !important;
+            margin-top: 10px !important;
+        }
+
+        #details_h1{
+            font-size: 15px !important;
+        }
+
+        #details_nav{
+            width: 120px;
+            height: 30px;
+            padding: 4px !important;
+            font-size: 13px !important;
+        }
+    }
+
+    @media(max-width:280px){
+        #nav_a{
+            margin-left: -20px;
+        }}
+
+ </style>
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5" style="column-gap: 10px;" id="nav_a">
+     <img src="{% static 'img/logo.png' %}" alt="" style="width: 60px; height: 60px;" id="nav_img">   <h5 class="m-0 text-primary" id="nav_h1">The Wings of Gods Glory Worship Center</h5>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+            <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+            <a href="{% url 'blog' %}" class="nav-item nav-link">Events/Activities</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+    <!--Slideshow start-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="details" style="position: absolute; z-index: 2; margin-top: 100px; width: 100%; row-gap: 30px; top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); padding-left: 280px;" id="details">
+        <h1 style="position: absolute; color: #0463FA; z-index: 2; font-size: 30px;" id="details_h1">Welcome to The Wings of Gods Glory Worship Center</h1>
+        <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="{% url 'about' %}" style="margin-top: 100px !important; background: #0240a2 !important;" id="details_nav">Learn More</a>
+    </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="width: 100%; height: auto; max-height: 100vh;">
+            <img src="{% static 'img/pastor_helen1.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: auto;  max-height: 100vh;">
+          </div>
+          <div class="carousel-item" style="width: 100%; height: auto;  max-height: 100vh;">
+            <img src="{% static 'img/banner2.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: auto;  max-height: 100vh;">
+          </div>
+          <div class="carousel-item" style="width: 100%; height: auto;  max-height: 100vh;">
+            <img src="{% static 'img/banner3.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: auto;  max-height: 100vh;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="z-index: 4; margin-top: 200px;">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="z-index: 4;"></span>
+          <span class="visually-hidden" style="z-index: 4;">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="z-index: 4; margin-top: 200px;">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="z-index: 4;"></span>
+          <span class="visually-hidden" style="z-index: 4;">Next</span>
+        </button>
+      </div>
+
+
+      <!--Slideshow End-->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="{% static 'img/banner3.jpg' %}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{% static 'img/banner2.jpg' %}" alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4">Who We Are</h1>
+                    <p>At The Wings of Gods Glory Worship Center , we are a vibrant, loving community dedicated to living out the teachings of Jesus Christ. Our church is more than a building; it is a family where everyone is welcomed, valued, and loved. We strive to be a beacon of hope and a source of spiritual growth for all who join us.</p>
+                    <p class="mb-4">We are a loving and caring family who believe in spreading the word of God and building a strong community of believers. Join us for our weekly services and experience the love and grace of God.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Friendly Community</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Bible Study</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Open to all</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="{% url 'about' %}">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1>Our Weekly Services</h1>
+            </div>
+            <div class="row g-4" style="display: flex !important; justify-content: center !important;">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden" style="cursor: pointer;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/sunday.jpg' %}" alt="" id="sunday">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Sunday Services</h5>
+                            <p class="text-primary">10:00 am Prompt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden" style="cursor: pointer;" >
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/tuesday.jpg' %}" alt="" id="tuesday">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Tuesday Services</h5>
+                            <p class="text-primary">4:00pm Prompt </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden"  style="cursor: pointer;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/thursday.jpg' %}" alt="" id="thursday">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Thursday Services</h5>
+                            <p class="text-primary">4:00pm Prompt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1>What People Say About Us!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{% static 'img/testimonial.png' %}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>This is a fantastic and wonderfull church!, a perfect place for learning the teachings of our Lord Jesus Christ.</p>
+                        <span class="fst-italic">Joseph Edward</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{% static 'img/testimonial2.png' %}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>This church has made a positive impact in my life ever since i became a part of this church, please come and be BLESSED!.</p>
+                        <span class="fst-italic">Mr. Kunle Ajayi</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{% static 'img/testimonial3.png' %}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>This church is a very lovely place, filled with lots of kind people,i strongly recommend attending this church!.</p>
+                        <span class="fst-italic">Ben Samuel</span>
+                    </div>
+                </div>
+                <!-- <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{% static 'img/testimonial1.png' %}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <h5 class="mb-1">Patient Name</h5>
+                        <span class="fst-italic">Mrs. Helen Ajayi</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+{% endblock %}
+
+
+</html>

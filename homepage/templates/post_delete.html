@@ -1,0 +1,12 @@
+<!-- templates/post_delete.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Are you sure you want to delete this post?</h1>
+  <p>{{ post.title }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'blog' post.id %}">No, go back</a>
+  </form>
+{% endblock %}

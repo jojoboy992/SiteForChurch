@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Log in | Admin{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'your_app/css/custom_admin.css' %}">
+    <style>
+        /* custom_admin.css */
+
+/* General body styles */
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Center the login content */
+#content {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 30px; /* Padding inside the box */
+    background-color: #fff; /* White background for the box */
+    margin: 100px auto; /* Center the box on the page */
+    max-width: 400px; /* Max width for the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Header styles */
+h1 {
+    color: #333; /* Dark gray color for the header */
+    font-size: 28px; /* Header font size */
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Input field styles */
+.form-row {
+    margin-bottom: 15px; /* Space between input fields */
+}
+
+label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width for the button */
+    font-size: 16px; /* Font size for button text */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styles */
+p {
+    text-align: center; /* Center text for error message */
+    font-size: 14px; /* Font size for error message */
+    color: red; /* Red color for error message */
+}
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Admin Login</h1>
+        <form method="post" action="{% url 'admin:login' %}">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" id="id_username" required>
+            </div>
+            <div class="form-row">
+                <label for="id_password">Password:</label>
+                <input type="password" name="password" id="id_password" required>
+            </div>
+            <div class="submit-row">
+                <input type="submit" value="Log in">
+            </div>
+        </form>
+        {% if valid_login %}
+            <p style="color: red;">Invalid username or password.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

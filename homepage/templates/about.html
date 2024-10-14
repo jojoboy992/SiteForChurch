@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+{% block content%}
+
+<style>
+    #pastor_1{
+        width: 336px !important; 
+        height: 350px !important;
+    }
+    @media(max-width:995px){
+        #pastor_1{
+            width: 336px !important;
+            height: 350px !important;
+        }
+    }
+
+    @media(max-width:992px){
+        #head_pastor{
+            /* width: 100% !important; */
+            height: auto !important;
+        }
+    }
+
+    @media(max-width:768px){
+        #pastor_1{
+        width: 516px !important; 
+        height: 350px !important;
+    }
+    }
+
+    @media(max-width:670px){
+        #nav_h1{
+            font-size: 15px !important;
+        }
+
+        #nav_img{
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+
+    @media(max-width:380px){
+        #nav_h1{
+            font-size: 10px !important;
+        }
+
+        #nav_img{
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        @media(max-width:280px){
+        #nav_a{
+            margin-left: -20px;
+        }
+    }
+    }
+ </style>
+
+
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5" style="column-gap: 10px;" id="nav_a">
+        <img src="{% static 'img/logo.png' %}" alt="" style="width: 60px; height: 60px;" id="nav_img">   <h5 class="m-0 text-primary" id="nav_h1">The Wings of Gods Glory Worship Center</h5>
+       </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link active">About</a>
+            <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+            <a href="{% url 'blog' %}" class="nav-item nav-link">Events/Activities</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+     <!-- About Start -->
+     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="{% static 'img/banner3.jpg' %}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{% static 'img/banner2.jpg' %}" alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4">About Us</h1>
+                    <p>Our mission is to glorify God through worship, grow together in Christ through discipleship, and reach out to the world with the Gospel. We aim to create an environment where individuals can encounter God, deepen their faith, and experience the transforming power of His love.</p>
+                    <p class="mb-4">We believe that every member of our church family has a unique role to play in God’s work. Whether through volunteering, participating in small groups, or joining one of our ministries, there are many ways to get involved and make a difference.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Friendly Community</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Bible Study</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Open to all</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <h1 class="text-white mb-4">Our Head Pastor</h1>
+                        <h6 class="text-white mb-4">Prophetess Mrs.Helen Felix Ajayi</h6>
+                        <p class="text-white mb-4 pb-2">She is a very powerfull Prophetest of God, who discovered the love of God at a very young age,her love for God is what lead her to create this powerfull and great tarbanacle of our Almighty God!.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/pastor_helen_2.jpg' %}" style="object-fit: cover;" alt="" id="head_pastor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1>Our Ministers</h1>
+            </div>
+            <div class="row g-4" style="display: flex !important; justify-content: center !important;">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden"  style="cursor: pointer;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/woggwc_pic10.jpg' %}" alt="" id="pastor_1">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Assistant Pastor</h5>
+                            <p class="text-primary">Apostle Bukki Williams</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden"  style="cursor: pointer;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/banner2.jpg' %}" alt="" id="pastor_1">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Associate Pastor</h5>
+                            <p class="text-primary">Mr. Kunle Ajayi</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden"  style="cursor: pointer;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/decon.jpg' %}" alt="" id="pastor_1">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Deaconess</h5>
+                            <p class="text-primary">Mrs.Chinyere Uchime</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+        
+
+    
+{% endblock %}
+
+</html>

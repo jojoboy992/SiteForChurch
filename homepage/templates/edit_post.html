@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .create_post {
+        width: 100%; /* Full width */
+        max-width: 800px; /* Limit max width */
+        margin: 0 auto; /* Horizontally center the div */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    form {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 800px;
+        height: 50px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        padding: 10px;
+        font-size: 16px;
+        color: black !important;
+        margin-top: 20px;
+    }
+
+    input[type="file"] {
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 17px;
+        color: white;
+        background: #0463FA;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    /* New styles for error messages */
+    .error {
+        color: red; /* Set text color to red */
+        margin-top: 10px; /* Add some space above the error message */
+        font-size: 14px; /* Adjust font size as needed */
+    }
+</style>
+
+<div class="create_post">
+    <h1 style="text-align: center;">Edit Post</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label }}
+                {{ field }}
+                {% if field.errors %}
+                    <div class="error">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        {% if form.non_field_errors %}
+            <div class="error">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{% url 'blog' %}" style="align-self: center;"> <- Cancel</a>
+</div>
+
+
+{% endblock %}

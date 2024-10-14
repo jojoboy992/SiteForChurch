@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Klinik - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+ <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+
+</head>
+
+{% block content%}
+
+
+<style>
+
+.post-image{
+  margin-bottom: 50px;
+}
+
+.post-video{
+  margin-bottom: 50px;
+}
+
+.post_img {
+    display: block;
+    margin: 0 auto !important;
+    width: 100% !important; /* Keep the width at 100% */
+    max-width: 98% !important; /* Slight margin from the container */
+    height: auto; /* Ensure height is automatic to maintain aspect ratio */
+    max-height: 900px; /* Set the maximum height */
+    object-fit: cover; /* Use cover to maintain the aspect ratio and fill the width */
+}
+
+.post_video {
+    display: block;
+    margin: 0 auto !important;
+    width: 100% !important; /* Keep the width at 100% */
+    max-width: 98% !important; /* Slight margin from the container */
+    height: auto; /* Ensure height is automatic to maintain aspect ratio */
+    max-height: 900px; /* Set the maximum height */
+    object-fit: cover; /* Use cover to maintain the aspect ratio and fill the width */
+}
+
+.edit_delete{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.edit_a{
+  background: #0463FA !important;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px !important;
+  color: white !important;
+}
+
+.delete_a{
+  background: darkred !important;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px !important;
+  color: white !important;
+}
+
+  @media(max-width:670px){
+        #nav_h1{
+            font-size: 15px !important;
+        }
+
+        #nav_img{
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+
+    @media(max-width:380px){
+        #nav_h1{
+            font-size: 10px !important;
+        }
+
+        #nav_img{
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        @media(max-width:280px){
+        #nav_a{
+            margin-left: -20px;
+        }
+    }
+    }
+</style>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+  <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5" style="column-gap: 10px;" id="nav_a">
+   <img src="{% static 'img/logo.png' %}" alt="" style="width: 60px; height: 60px;" id="nav_img">   <h5 class="m-0 text-primary" id="nav_h1">The Wings of Gods Glory Worship Center</h5>
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+          <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+          <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+          <a href="{% url 'blog' %}" class="nav-item nav-link active">Events/Activities</a>
+      </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+ <!-- Page Header Start -->
+ <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Events/Activies</h1>
+  </div>
+</div>
+<!-- Page Header End -->
+
+  <div class="post_div" style="display: grid; justify-content: center;">
+    {% for post in posts %}
+      <div class="post-item">
+        {% if post.image %}
+          <div class="post-image">
+            <h1 style="text-align: center;">{{ post.title }}</h1>
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post_img">
+        
+          </div>
+          {% if request.user.is_superuser %}
+          <div class="edit_delete">
+            <a href="{% url 'post_edit' post.id %}" class="edit_a">Edit post</a>
+            <a href="{% url 'post_confirm_delete' post.id %}" class="delete_a">Delete post</a>
+          </div>
+          {% endif %}
+        {% endif %}
+  
+        {% if post.video %}
+          <div class="post-video">
+            <h1 style="text-align: center;">{{ post.title }}</h1>
+            <video controls class="post_video">
+              <source src="{{ post.video.url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          {% if request.user.is_superuser %}
+          <div class="edit_delete">
+        <a href="{% url 'post_edit' post.id %}" class="edit_a">Edit post</a>
+        <a href="{% url 'post_confirm_delete' post.id %}" class="delete_a">Delete post</a>
+      </div>
+      {% endif %}
+
+
+        {% endif %}
+  
+      </div>
+    {% empty %}
+    <h1 style="text-align: center;">No post avaible yet.</h1>
+    <p style="text-align: center;">Come back later</p>
+    {% endfor %}
+
+    {% if request.user.is_superuser %}
+
+  <a href="{% url 'post_new' %}" style="justify-self: center;">Create New Post</a>
+  {% endif %}
+
+  </div>
+  
+  
+  {% endblock %}
+
+  </html>
