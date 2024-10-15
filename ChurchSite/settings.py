@@ -30,7 +30,7 @@ DEBUG = False
 CSRF_TRUSTED_ORIGINS = [
     'https://wingsofgodsgloryworshipcenter.vercel.app',
 ]
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".vercel.app"]
 
 # admin name: woggwc-admin
 # admin password: woggwc@123
