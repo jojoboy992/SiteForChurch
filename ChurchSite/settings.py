@@ -28,9 +28,9 @@ SECRET_KEY = 'django-insecure-cq4$!wd7018@ek5=95dvx744s@vtng=$a@!26#h**n8hrr_z*b
 DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://wingsofgodsgloryworshipcenter.vercel.app',
+    'https://wingsofgodsgloryworshipcenter.onrender.com',
 ]
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".onrender.com"]
 
 # admin name: woggwc-admin
 # admin password: woggwc@123
