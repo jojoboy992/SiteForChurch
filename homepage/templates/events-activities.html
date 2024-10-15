@@ -21,33 +21,95 @@
 
 <style>
 
+*{
+  box-sizing: border-box !important;
+}
+
+.post-image-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+
+.post-video-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+
 .post-image{
-  margin-bottom: 50px;
+  height: 500px;
+  height: auto;
+  width: 500px;
 }
 
 .post-video{
-  margin-bottom: 50px;
+  margin-top: -120px;
+  height: 620px !important;
+  height: auto;
+  width: 675px;
 }
 
-.post_img {
-    display: block;
-    margin: 0 auto !important;
-    width: 100% !important; /* Keep the width at 100% */
-    max-width: 98% !important; /* Slight margin from the container */
-    height: auto; /* Ensure height is automatic to maintain aspect ratio */
-    max-height: 900px; /* Set the maximum height */
-    object-fit: cover; /* Use cover to maintain the aspect ratio and fill the width */
+.image-h1-p-div{
+  display: grid;
+  border: 1.5px solid #8D8E92;
 }
 
-.post_video {
-    display: block;
-    margin: 0 auto !important;
-    width: 100% !important; /* Keep the width at 100% */
-    max-width: 98% !important; /* Slight margin from the container */
-    height: auto; /* Ensure height is automatic to maintain aspect ratio */
-    max-height: 900px; /* Set the maximum height */
-    object-fit: cover; /* Use cover to maintain the aspect ratio and fill the width */
+.video-h1-p-div{
+  display: grid;
+  border: 1.5px solid #8D8E92;
 }
+
+.post-image-div-h1{
+  margin-top: 50px;
+  /* font-size: 30px; */
+  text-align: center;
+  width: 100%;
+ 
+}
+
+.post-video-div-h1{
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.line{
+  border: 1px solid #8D8E92;
+  margin-top: -70px;
+  width: 100%;
+  height: 0px !important;
+}
+
+.post-image-div-p {
+  margin-top: -130px !important;
+  font-size: 20px;
+  text-align: center !important; 
+  overflow-wrap: break-word;
+  max-width: 510px; 
+  padding: 10px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.post-video-div-p{
+  margin-top: -130px !important;
+  font-size: 20px;
+  overflow-wrap: break-word;
+  max-width: 510px; 
+  padding: 10px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+/*https://wingsofgodsgloryworshipcenter.vercel.app*/
 
 .edit_delete{
   margin-top: 10px;
@@ -73,7 +135,436 @@
   color: white !important;
 }
 
+  @media(max-width: 1250px){
+
+    .post-image-div{
+  display: flex;
+  height: 400px !important;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+    .post-image{
+  height: 400px !important;
+  height: auto;
+  width: 400px !important;
+}
+
+.post-image-div-h1{
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  font-size: 32px !important;
+}
+
+.post-image-div-p{
+  margin-top: -130px !important;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.post-video-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -195px;
+  height: 695px !important;
+  height: auto;
+  width: 545px;
+}
+
+.post-video-div-h1{
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  font-size: 32px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: -130px !important;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+  }
+
+  @media(max-width: 1100px){
+
+.post-image-div{
+display: flex;
+height: 350px !important;
+width: 100%;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 60px;
+}
+.post-image{
+height: 350px !important;
+height: auto;
+width: 350px !important;
+}
+
+.post-image-div-h1{
+margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 30px !important;
+}
+
+.post-image-div-p{
+margin-top: -130px !important;
+font-size: 15px;
+text-align: center;
+  overflow-wrap: break-word;
+  max-width: 450px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.post-video-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -232px;
+  height: 732px !important;
+  height: auto;
+  width: 476px;
+}
+
+.post-video-div-h1{
+  margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 30px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: -130px !important;
+font-size: 15px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 450px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+}
+
+
+@media(max-width: 900px){
+
+.post-image-div{
+display: flex;
+height: 300px !important;
+width: 100%;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 60px;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+.post-image-div-p{
+margin-top: -130px !important;
+font-size: 13px;
+text-align: center;
+width: 100%;
+}
+
+.post-video-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 402px;
+}
+
+.post-video-div-h1{
+  margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: -150px !important;
+font-size: 13px;
+text-align: center;
+width: 100%;
+}
+}
+
+@media(max-width: 970px){
+
+.post-image-div{
+flex-direction: column;
+height: 300px !important;
+width: 100%;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 600px !important;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 40px !important;
+}
+
+.line{
+  border: 1px solid #8D8E92;
+  margin-top: 20px !important;
+  width: 100%;
+  height: 0px !important;
+}
+
+.post-image-div-p{
+margin-top: 20px !important;
+font-size: 20px;
+text-align: center;
+width: 100%;
+}
+
+.post-video-div{
+  flex-direction: column;
+  margin-top: 235px;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 100%;
+}
+
+.post-video-div-h1{
+  margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 40px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: 20px !important;
+font-size: 20px;
+text-align: center;
+width: 100%;
+}
+
+.edit_delete{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+}
+
+/* @media(max-width: 900px){
+
+.post-image-div{
+height: 300px !important;
+width: 100%;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 60px;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+.post-image-div-p{
+margin-top: -100px !important;
+font-size: 13px;
+text-align: center;
+text-align: center;
+  overflow-wrap: break-word;
+  max-width: 450px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.post-video-div{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 402px;
+}
+
+.post-video-div-h1{
+  margin-top: 50px;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: -150px !important;
+font-size: 13px;
+text-align: center;
+width: 100%;
+}
+} */
+
   @media(max-width:670px){
+    #nav_h1{
+            font-size: 15px !important;
+        }
+
+        #nav_img{
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .post-image-div{
+flex-direction: column;
+height: 300px !important;
+width: 100%;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 300px !important;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 30px !important;
+}
+
+.line{
+  border: 1px solid #8D8E92;
+  margin-top: 20px !important;
+  width: 100%;
+  height: 0px !important;
+}
+
+.post-image-div-p{
+margin-top: 20px !important;
+font-size: 13px;
+text-align: center;
+  overflow-wrap: break-word;
+  max-width: 350px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+
+.post-video-div{
+  flex-direction: column;
+  margin-top: 130px;
+  height: 500px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 100%;
+}
+
+.post-video-div-h1{
+  margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 30px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: 20px !important;
+font-size: 13px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 350px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.edit_delete{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+    }
+
+
+    @media(max-width:451px){
         #nav_h1{
             font-size: 15px !important;
         }
@@ -82,7 +573,91 @@
             width: 40px !important;
             height: 40px !important;
         }
+
+        .post-image-div{
+flex-direction: column;
+height: 300px !important;
+width: 100%;
+padding-left: 10px !important;
+padding-right: 10px !important;
+margin-bottom: 250px !important;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+.line{
+  border: 1px solid #8D8E92;
+  margin-top: 20px !important;
+  width: 100%;
+  height: 0px !important;
+}
+
+.post-image-div-p{
+margin-top: 20px !important;
+font-size: 15px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 300px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.post-video-div{
+  flex-direction: column;
+  margin-top: 130px;
+  height: 500px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 100%;
+}
+
+.post-video-div-h1{
+  margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 25px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: 20px !important;
+font-size: 15px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 300px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.edit_delete{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
     }
+    
 
     @media(max-width:380px){
         #nav_h1{
@@ -100,6 +675,203 @@
         }
     }
     }
+
+    @media(max-width:350px){
+
+     
+        #nav_h1{
+            font-size: 10px !important;
+        }
+
+        #nav_img{
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+    
+
+        .post-image-div{
+flex-direction: column;
+height: 300px !important;
+width: 100%;
+padding-left: 10px !important;
+padding-right: 10px !important;
+margin-bottom: 140px !important;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 20px !important;
+}
+
+.line{
+  border: 1px solid #8D8E92;
+  margin-top: 20px !important;
+  width: 100%;
+  height: 0px !important;
+}
+
+.post-image-div-p{
+margin-top: 20px !important;
+font-size: 12px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 250px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.post-video-div{
+  flex-direction: column;
+  margin-top: 80px;
+  height: 500px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 100%;
+}
+
+.post-video-div-h1{
+  margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 20px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: 20px !important;
+font-size: 12px;
+text-align: center;
+overflow-wrap: break-word;
+  max-width: 250px;
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.edit_delete{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+#event-activities{
+  font-size: 30px;
+}
+    }
+
+
+    @media(max-width:300px){
+
+     
+#nav_h1{
+    font-size: 10px !important;
+}
+
+#nav_img{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+
+
+.post-image-div{
+flex-direction: column;
+height: 300px !important;
+width: 100%;
+padding-left: 5px !important;
+padding-right: 5px !important;
+margin-bottom: 110px !important;
+}
+.post-image{
+height: 300px !important;
+height: auto;
+width: 300px !important;
+}
+
+.post-image-div-h1{
+margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 20px !important;
+}
+
+.line{
+border: 1px solid #8D8E92;
+margin-top: 20px !important;
+width: 100%;
+height: 0px !important;
+}
+
+.post-image-div-p{
+margin-top: 20px !important;
+font-size: 10px;
+text-align: center;
+width: 100%;
+}
+
+.post-video-div{
+  flex-direction: column;
+  margin-top: 80px;
+  height: 500px;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 60px;
+}
+.post-video{
+  margin-top: -274px;
+  height: 774px !important;
+  height: auto;
+  width: 100%;
+}
+
+.post-video-div-h1{
+  margin-top: 20px !important;
+text-align: center;
+width: 100%;
+font-size: 21px !important;
+}
+
+
+.post-video-div-p{
+  margin-top: 20px !important;
+font-size: 10px;
+text-align: center;
+width: 100%;
+}
+
+
+
+.edit_delete{
+margin-top: 10px;
+display: flex;
+column-gap: 60px;
+justify-content: center;
+margin-bottom: 70px;
+}
+
+#event-activities{
+font-size: 20px;
+}
+}
 </style>
 
 <!-- Navbar Start -->
@@ -111,7 +883,7 @@
       <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <div class="navbar-nav ms-auto p-4 p-lg-0" id="nav">
           <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
           <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
           <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
@@ -124,19 +896,22 @@
  <!-- Page Header Start -->
  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
   <div class="container py-5">
-      <h1 class="display-3 text-white mb-3 animated slideInDown">Events/Activies</h1>
+      <h1 class="display-3 text-white mb-3 animated slideInDown" id="event-activities">Events/Activies</h1>
   </div>
 </div>
 <!-- Page Header End -->
 
-  <div class="post_div" style="display: grid; justify-content: center;">
+  <div class="post_div">
     {% for post in posts %}
       <div class="post-item">
         {% if post.image %}
-          <div class="post-image">
-            <h1 style="text-align: center;">{{ post.title }}</h1>
-            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post_img">
-        
+          <div class="post-image-div">
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-img">
+            <div class="image-h1-p-div">
+            <h1 class="post-image-div-h1">{{ post.title }}</h1>
+            <div class="line"></div>
+            <p class="post-image-div-p">{{ post.content }}</p>
+          </div>      
           </div>
           {% if request.user.is_superuser %}
           <div class="edit_delete">
@@ -147,12 +922,16 @@
         {% endif %}
   
         {% if post.video %}
-          <div class="post-video">
-            <h1 style="text-align: center;">{{ post.title }}</h1>
-            <video controls class="post_video">
+          <div class="post-video-div">
+            <video controls class="post-video">
               <source src="{{ post.video.url }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
+            <div class="video-h1-p-div">
+              <h1 class="post-video-div-h1">{{ post.title }}</h1>
+              <div class="line"></div>
+              <p class="post-video-div-p">{{ post.content }}</p>
+            </div>         
           </div>
           {% if request.user.is_superuser %}
           <div class="edit_delete">
@@ -171,8 +950,9 @@
     {% endfor %}
 
     {% if request.user.is_superuser %}
-
+      <div class="create_new_post" style="display: grid; justify-content: center;">
   <a href="{% url 'post_new' %}" style="justify-self: center;">Create New Post</a>
+</div>
   {% endif %}
 
   </div>

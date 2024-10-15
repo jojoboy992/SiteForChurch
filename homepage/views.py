@@ -3,6 +3,8 @@ from django.http import *
 from django.views.generic import *
 from .models import *
 from .forms import PostForm
+from django.utils import timezone
+from datetime import timedelta
 
 
 # Create your views here.
@@ -21,14 +23,16 @@ class ContactPage(TemplateView):
 def custom_404(request, exception):
     return render(request, '404.html', status=404)
 
+
 def post_list(request):
-    posts = Post.objects.all().order_by('-created_at') 
+    # Fetch only published posts
+    posts = Post.objects.filter(published=True).order_by('-created_at')  # Order by created_at if needed
     return render(request, 'events-activities.html', {'posts': posts})
 
 # Post detail view (accessible to all users)
-def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'post_detail.html', {'post': post})
+# def post_detail(request, pk):
+#     post = get_object_or_404(Post, pk=pk)
+#     return render(request, 'post_detail.html', {'post': post})
 
 # Restrict to admin users only
 def post_new(request):

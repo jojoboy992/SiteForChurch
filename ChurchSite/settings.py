@@ -28,10 +28,12 @@ SECRET_KEY = 'django-insecure-cq4$!wd7018@ek5=95dvx744s@vtng=$a@!26#h**n8hrr_z*b
 DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://9019-102-91-92-1.ngrok-free.app/',
+    'https://wingsofgodsgloryworshipcenter.vercel.app',
 ]
 ALLOWED_HOSTS = ["*"]
 
+# admin name: woggwc-admin
+# admin password: woggwc@123
 
 # Application definition
 
