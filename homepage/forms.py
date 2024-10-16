@@ -33,13 +33,13 @@ class PostForm(forms.ModelForm):
 
         # Title length validation
         if title:
-            if len(title) < 15 or len(title) > 21:
-                raise forms.ValidationError(f"Title must be between 15 and 21 characters. {len(title)}")
+            if len(title) < 15 or len(title) > 25:
+                raise forms.ValidationError(f"Title must be between 15 and 25 characters. {len(title)}")
 
         # Content length validation
         if content:
-            if len(content) < 50 or len(content) > 100:
-                raise forms.ValidationError(f"Content must be between 50 and 100 characters. Current length: {len(content)}")
+            if len(content) < 50 or len(content) > 150:
+                raise forms.ValidationError(f"Content must be between 50 and 150 characters. Current length: {len(content)}")
 
         # Check image size
         if isinstance(image, InMemoryUploadedFile):

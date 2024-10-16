@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 ALLOWED_HOSTS = [".onrender.com"]
 
+
 # admin name: woggwc-admin
 # admin password: woggwc@123
 
@@ -151,7 +152,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/x1_x1_x1_admin_woggwc_x1_x1_x1_jojoboy_x1_x1_x1/'
+LOGIN_REDIRECT_URL = 'x1_x1_x1_x1_x1admin_woggwc_x1_x1_x1_admin_woggwc_secret_path_to_the_ladmin-login_page_access_limited_x1_x1_x1x1_x1/'
 
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Woggwc Admin',  # Title of your admin interface

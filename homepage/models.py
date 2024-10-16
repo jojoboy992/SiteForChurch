@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 class Post(models.Model):
-    title = models.CharField(max_length=21, help_text="Maximum 30 characters.")
+    title = models.CharField(max_length=25, help_text="Maximum 20 characters.")
     content = models.TextField(help_text="Maximum 150 characters.")
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now)

@@ -10,7 +10,7 @@ from homepage.views import *
 handler404 = 'homepage.views.custom_404'
 
 urlpatterns = [
-    path('x1_x1_x1_admin_woggwc_x1_x1_x1_jojoboy_x1_x1_x1/', admin.site.urls),
+    path('x1_x1_x1_x1_x1admin_woggwc_x1_x1_x1_admin_woggwc_secret_path_to_the_ladmin-login_page_access_limited_x1_x1_x1x1_x1/', admin.site.urls),
     path('grappelli/', include('grappelli.urls')),
     # path('jet/', include('jet.urls', 'jet')), 
     path('', include('homepage.urls')),
